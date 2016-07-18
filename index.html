@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tinker Developers</title>
+  <meta name="description" content="Documentation and such for developers using the Tinker APIs">
+  <meta name="author" content="Tinker.Travel B.V.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+
+  <!-- <link href='css/typography.css' media='screen' rel='stylesheet' type='text/css'/> -->
+  <!-- <link href='css/reset.css' media='screen' rel='stylesheet' type='text/css'/> -->
+  <link href='css/screen.css' media='screen' rel='stylesheet' type='text/css'/>
+  <link href='css/reset.css' media='print' rel='stylesheet' type='text/css'/>
+  <link href='css/print.css' media='print' rel='stylesheet' type='text/css'/>
+
+  <script src='lib/object-assign-pollyfill.js' type='text/javascript'></script>
+  <script src='lib/jquery-1.8.0.min.js' type='text/javascript'></script>
+  <script src='lib/jquery.slideto.min.js' type='text/javascript'></script>
+  <script src='lib/jquery.wiggle.min.js' type='text/javascript'></script>
+  <script src='lib/jquery.ba-bbq.min.js' type='text/javascript'></script>
+  <script src='lib/handlebars-2.0.0.js' type='text/javascript'></script>
+  <script src='lib/js-yaml.min.js' type='text/javascript'></script>
+  <script src='lib/lodash.min.js' type='text/javascript'></script>
+  <script src='lib/backbone-min.js' type='text/javascript'></script>
+  <script src='swagger-ui.min.js' type='text/javascript'></script>
+  <script src='lib/highlight.9.1.0.pack.js' type='text/javascript'></script>
+  <script src='lib/highlight.9.1.0.pack_extended.js' type='text/javascript'></script>
+  <script src='lib/jsoneditor.min.js' type='text/javascript'></script>
+  <script src='lib/marked.js' type='text/javascript'></script>
+  <script src='lib/swagger-oauth.js' type='text/javascript'></script>
+
+</head>
+<body  class="swagger-section">
+  <div class="container">
+    <div class="row">
+      <div style="margin-top: 5%">
+        <h2 class="skeleton">Tinker API</h2>
+
+        <p>To request an access token, contact <a href="mailto:api@tinker.travel"><code class="email">api@tinker.travel</code></a>
+        </p>
+        <h3 class="skeleton"><code><strong>api</strong>.tinker.taxi</code></h3>
+        <p>
+          This API allow booking of <em>taxi rides</em> to and
+          from airports in Europe.
+        </p>
+        <p>
+          You give us the flight number, flight date and home address and
+          we give you various options. We call this a <strong>quote</strong>.
+          You pick the option you like and <strong>confirm</strong> it.
+        </p>
+        <img width="400px" src="images/flight-takeoff.png"/>
+        <p>
+          When you book a takeoff, it is important to give the <em>taxi drop-off time</em>.
+        </p>
+        <img width="400px" src="images/flight-landing.png"/>
+        <p>
+          When you book a landing, it is important to specify <em>the landing time of the flight</em>.
+        </p>
+      </div>
+      <div class="swagger-ui-wrap" id="swagger-ui-container">
+      </div>
+    </div>
+  </div>
+
+<script>
+var swaggerUi = new SwaggerUi({
+  url: "https://sandbox.tinker.taxi/explorer/swagger.json",
+  dom_id: "swagger-ui-container",
+  validatorUrl: null
+});
+
+swaggerUi.load();
+</script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
